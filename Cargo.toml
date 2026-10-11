@@ -1,0 +1,35 @@
+[package]
+name = "my_crate"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+anyhow = "1.0.104"
+async-trait = "0.1.92"
+console_error_panic_hook = "0.1.7"
+futures = "0.3.34"
+getrandom = { version = "0.4.3", features = ["wasm_js"] }
+js-sys = "0.3.106"
+rand = "0.10.3"
+serde = { version = "1.0.229", features = ["derive"] }
+serde-wasm-bindgen = "0.6.5"
+wasm-bindgen = { version = "0.2.129", features = ["serde-serialize"] }
+wasm-bindgen-futures = "0.4.79"
+
+[dependencies.web-sys]
+version = "0.3.106"
+features = [
+    "console", 
+    "CanvasRenderingContext2d", 
+    "Document", 
+    "Element",
+    "HtmlCanvasElement", 
+    "HtmlImageElement",
+    "KeyboardEvent",
+    "Performance",
+    "Response",
+    "Window", 
+] 
